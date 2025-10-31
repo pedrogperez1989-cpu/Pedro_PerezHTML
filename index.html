@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESIE Servicio de Entregas</title>
+    <link rel="stylesheet" href="CSS/StyleSheets.css">  <!-- Enlace a la hoja de estilos CSS externa -->
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon"> <!-- favicon de la pag -->
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+  <!-- Cabecera  con logo, nombre de la empresa y menú de navegacion -->
+    <header>
+        <div>   <!-- Logo de la empresa -->
+            <img src="assets/img/ESIE.webp" alt="Logo de la empresa" width="70" id="logo">
+        </div>
+        <h1>Super entregas ESIE</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="activo">Inicio</a></li>
+                <li><a href="views/servicios.html">Servicios</a></li>
+                <li><a href="views/productos.html">Productos</a></li>
+                <li><a href="views/presupuesto.html">Presupuesto</a></li>
+                <li><a href="views/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Clearfix para evitar que colapcen las pagina con float :CSS -->
+    <div class="clearfix"></div>
+
+    <main>
+        <!-- Barra lateral con información de contacto y promociones -->
+        <aside>
+            <h3>¿Necesitas ayuda?</h3>
+            <p>Contáctanos por:</p>
+            <ul>
+                <li>Teléfono: 5555-555-123</li>
+                <li>soporte@correos.com</li>
+            </ul>
+            <hr>
+            <h3>Conecta España e Irlanda en 48 h.</h3>
+            <p>¡Envía tus paquetes al mejor precio!</p>
+            <hr>
+            <p><strong>España - Irlanda desde 20 €</strong></p>
+            <p>Entrega en 48 a 72 h, ¡sin estrés!</p>
+            <p>Tu envío internacional más fácil.</p>
+            <hr>
+            <h3>Tarifas destacadas</h3>
+            <p>Consulta nuestras tarifas según peso y destino, o solicita un presupuesto personalizado.</p>
+            <a href="views/presupuesto.html">Solicitar Presupuesto</a>
+            <hr>
+            <h3>Atención en español e inglés.</h3>
+            <p>Nuestro asistente virtual puede ayudarte con cualquier duda.</p>
+            <button id="botonIA">Chat en directo</button> <!-- boton con id para ejecutar algo en JS-->
+        </aside>
+
+        <!-- Contenido principal -->
+        <div id="contenido">
+            <section>
+                <h2>Bienvenidos a ESIE</h2>
+                <p>
+                    Su servicio de confianza para envíos entre España e Irlanda.
+                    Rápido, seguro y económico. Conectamos familias a ambos lados del mar, llevando tus paquetes todo el cuidado que se les puede dar.
+                </p>
+                <p>
+                    En ESIE creemos que la distancia no debe ser una barrera. Somos un servicio de envíos especializado en conectar España e Irlanda,
+                    ofreciendo soluciones logísticas rápidas, seguras y accesibles tanto para particulares como para empresas.
+                    Nuestro compromiso es brindarte una experiencia simple y confiable: desde el momento en que recogemos tu paquete hasta su entrega,
+                    nos aseguramos de que todo llegue a tiempo y en perfectas condiciones.
+                    Con ESIE, enviar y recibir desde cualquiera de los dos países nunca fue tan fácil.
+                </p>
+            </section>
+
+            <section>
+             <!-- Lista de servicios ofrecidos -->
+                <h2>Nuestros servicios</h2>
+                <ul>
+                    <li>Envíos puerta a puerta entre España e Irlanda.</li>
+                    <li>
+                        Transporte econmico para cargas medianas y grandes.
+                         <!-- Sublista -->
+                        <ul>
+                            <li>Transporte exprés (24 a 48 horas).</li>
+                            <li>Transporte marítimo de mercancías pesadas (24 a 72 horas).</li>
+                        </ul>
+                    </li>
+                    <li>Seguimiento online en tiempo real.</li>
+                    <li>Gestión aduanera simplificada.</li>
+                    <li>Rastreo inteligente con IA y alertas automáticas.</li>
+                    <li>Atención en español e inglés.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <div class="clearfix"></div>
+
+    <!-- Pie de página con redes sociales y aviso legal -->
+    <footer id="footer">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank"><img src="assets/img/fb.png" alt="Facebook"></a>
+            <a href="https://x.com/" target="_blank"><img src="assets/img/X-Logo.png" alt="X"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="assets/img/images.jpeg" alt="Instagram"></a>
+        </div>
+        <p>ESIE Servicio de Entregas - Getafe, Madrid, España</p>
+        <p>&copy; 2025 ESIE — Todos los derechos reservados</p>
+        <p>
+            <a href="#footer"><strong>Aviso Legal:</strong></a> Este sitio web es una empresa ficticia creada con fines de aprendizaje.
+            Todo el contenido mostrado es de carácter demostrativo y no representa servicios reales.&copy;.
+        </p>
+    </footer>
+</body>
+</html>
