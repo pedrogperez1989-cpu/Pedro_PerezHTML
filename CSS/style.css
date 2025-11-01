@@ -148,10 +148,11 @@ textarea {
 }
 
 .caracteres{
-  color: rgb(141, 133, 14);
+  color: rgb(141, 133, 14);  
 }
+
 fieldset{
-  border-color: #000;
+  border-color: black;
   border: 20x;
   border-style: dashed;
 }
@@ -168,7 +169,7 @@ button {
   border-radius: 10px;
   width: 150px;
   height: 80;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 /*Propiedades a los img */
