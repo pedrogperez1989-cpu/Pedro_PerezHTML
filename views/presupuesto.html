@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ESIE Servicio de Entregas: envíos entre España e Irlanda en 48 horas. Seguimiento de envíos, tarifas y contacto.">
     <title>ESIE Servicio de Entregas</title>
     <!-- Enlace a la hoja de estilos CSS externa -->
     <link rel="stylesheet" href="../CSS/style.css">
@@ -10,12 +11,12 @@
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <!-- Enlace a hoja de js -->
     <script src="../js/script.js" defer></script>
-  </head>
+</head>
 <body>
     <!-- Cabecera principal -->
     <header>
-        <div id="logoh">
-            <img src="../assets/img/ESIE.webp" alt="Logo de la empresa" width="70" id="logo">
+        <div id="logo-header">
+            <img src="../assets/img/ESIE.webp" alt="Logo de ESIE, empresa de envios España-Irlanda" width="1024" height="1024" class="logo">
         </div>
         <h1>Super entregas ESIE</h1>
         <nav>
@@ -30,161 +31,189 @@
     </header>
 
     <main>
-        <!-- Barra lateral -->
+        <div id="contenido">
+            <!-- Sección de tarifas -->
+            <section>
+                <h2>Tarifas:</h2>
+                <article>
+                    <h2>Las tarifas de envio: España a Irlanda</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>España</th>
+                                <th>Irlanda</th>
+                                <th>Peso</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Madrid</td>
+                                <td>Cork</td>
+                                <td>10 ks</td>
+                                <td>15 €</td>
+                            </tr>
+                            <tr>
+                                <td>Madrid</td>
+                                <td>Cork</td>
+                                <td>20 ks</td>
+                                <td>20 €</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">Consulte envios especiales aqui:</td>
+                                <td><button type="submit" class="consulta" id="consultaES">Consultar</button></td>
+                                <!-- boton con id consultaIE para ejecutar algo en JS preguntar como usar la clase en vez de id a un prof--> 
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                    <h2>Las tarifas de envio: Irlanda a España</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Irlanda</th>
+                                <th>España</th>
+                                <th>Peso</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cork</td>
+                                <td>Madrid</td>
+                                <td>10 ks</td>
+                                <td>17 €</td>
+                            </tr>
+                            <tr>
+                                <td>Cork</td>
+                                <td>Madrid</td>
+                                <td>20 ks</td>
+                                <td>22 €</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">Consulte envios especiales aqui:</td>
+                                <td><button type="submit" class="consulta" id="consultaIE">Consultar</button></td>
+                                <!-- boton con id consultaIE para ejecutar algo en JS-->
+                            </tr>
+                        </tfoot>
+                    </table>
+                </article>
+            </section>
+            <!--formulario de presupuesto  agregando ID cada uno  metodo en get-->
+            <section>
+                <h2>Solicita tu presupuesto</h2>
+                <form id="formulario" action="#" method="get">
+                    <fieldset>
+                        <legend>Formulario de contacto:</legend>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" 
+                        id="nombre" 
+                        name="nombre" 
+                        required 
+                        pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]{2,20}"
+                        placeholder="Nombre"
+                        title="Nombre solo puede contener letras">
+                        <br>
+                        <label for="apellido">Apellido:</label>                
+                        <input type="text" 
+                        id="apellido" 
+                        name="apellido" 
+                        required
+                        pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]{2,20}"
+                        placeholder="Apellido"
+                        title="Apellido solo puede contener letras">
+                        <br>
+                        <label for="email">Email:</label>
+                        <input type="email" 
+                        id="email" 
+                        name="email" 
+                        required
+                        placeholder="ejemplo@gmail.com"
+                        pattern="^[A-Za-z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                        title="Solo se aceptan formatos tipo email">
+                        <br>
+                        <label for="telefono">Telefono:</label>
+                        <input type="tel" 
+                        id="telefono"
+                        name="telefono" 
+                        required
+                        pattern="^\s\¬+?[0-9]{9,13}$" 
+                        maxlength= "12"
+                        placeholder="+353 1234 567"
+                        title="Numero de telefono con codigo +34 o +353">
+                        <br>
+                        <label for="info">Solicite mas informacion:</label>
+                        <br>
+                        <textarea id="info" 
+                        maxlength= "200"
+                        name="info" 
+                        rows="4" 
+                        required
+                        placeholder="Que informacion desea solicitar (max. 200 caracteres)">
+                        </textarea>
+                        <br>
+                        <label>
+                            <input type="checkbox" required> Acepto la politica de privacidad
+                        </label>
+                        <br>
+                        <button type="submit">Enviar</button>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+                <!-- Barra lateral -->
         <aside>
             <h3>¿Necesitas ayuda?</h3>
             <p>Contactanos por:</p>
             <ul>
-                <li>Telefono: 5555-555-123</li>
-                <li>soporte@EISE.com</li>
+                <li>Telefono: +34 555 555 123</li>
+                <li>Telefono: +353 555 555 123</li>
+                <li>Email: <a href="mailto:soporte@ESIE.com">soporte@ESIE.com</a></li>
             </ul>
             <hr>
             <h3>Conecta España e Irlanda en 48 h.</h3>
             <p>¡Envía tus paquetes al mejor precio!</p>
             <hr>
-            <p><strong>España - Irlanda desde 20 €</strong></p>
-            <p>Entrega en 48 a 72 h, ¡sin estrés!</p>
-            <p>Tu envío internacional más fácil.</p>
+            <p><span>España - Irlanda desde 20 €</span></p>
+            <p>Entrega en 48 a 72 h, ¡sin estres!</p>
+            <p>Tu envio internacional más facil.</p>
             <hr>
             <h2>Tarifas destacadas</h2>
-            <p>Consulta nuestras tarifas según peso y destino, o solicita un presupuesto personalizado.</p>
+            <p>Consulta nuestras tarifas segun peso y destino, o solicita un presupuesto personalizado.</p>
             <a href="presupuesto.html">Solicitar Presupuesto</a>
             <hr>
-            <h3>Atención en español e inglés.</h3>
+            <h3>Atención en español e ingles.</h3>
             <p>Nuestro asistente virtual puede ayudarte con cualquier duda.</p>
             <button id="botonIA">Chat en directo</button> <!-- boton con id para ejecutar algo en JS-->
         </aside>
-        <!-- Sección de tarifas -->
-        <section>
-            <h2>Tarifas:</h2>
-            <article>
-                <h2>Las tarifas de envío: España a Irlanda</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>España</th>
-                            <th>Irlanda</th>
-                            <th>Peso</th>
-                            <th>Precio</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Madrid</td>
-                            <td>Cork</td>
-                            <td>10 ks</td>
-                            <td>15 €</td>
-                        </tr>
-                        <tr>
-                            <td>Madrid</td>
-                            <td>Cork</td>
-                            <td>20 ks</td>
-                            <td>20 €</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="3">Consulte envíos especiales aquí:</td>
-                            <td><button type="submit" class="consulta" id="consultaES">Consultar</button></td>
-                            <!-- boton con id consultaIE para ejecutar algo en JS preguntar como usar la clase en vez de id a un prof--> 
-                        </tr>
-                    </tfoot>
-                </table>
-
-                <h2>Las tarifas de envío: Irlanda a España</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Irlanda</th>
-                            <th>España</th>
-                            <th>Peso</th>
-                            <th>Precio</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Cork</td>
-                            <td>Madrid</td>
-                            <td>10 ks</td>
-                            <td>17 €</td>
-                        </tr>
-                        <tr>
-                            <td>Cork</td>
-                            <td>Madrid</td>
-                            <td>20 ks</td>
-                            <td>22 €</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="3">Consulte envíos especiales aquí:</td>
-                            <td><button type="submit" class="consulta" id="consultaIE">Consultar</button></td>
-                            <!-- boton con id consultaIE para ejecutar algo en JS-->
-                        </tr>
-                    </tfoot>
-                </table>
-            </article>
-        </section>
-
-        <!--formulario de presupuesto  agregando ID cada uno  metodo en get-->
-        <section>
-            <h2>Solicita tu presupuesto</h2>
-            <form id="formulario" action="#" method="get">
-                <fieldset>
-                    <legend>Formulario de contacto</legend>
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Nombre">
-
-                    <br>
-
-                    <label for="Apellido">Apellido:</label>                
-                    <input type="text" id="Apellido" name="Apellido" required placeholder="Apellido">
-
-                    <br>
-
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required placeholder="ejemplo@gmail.com">
-
-                    <br>
-
-                    <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono" required placeholder="+353 555 555 555">
-
-                    <br>
-
-                    <label for="info">Solicite más información:</label>
-
-                    <br>
-
-                    <textarea id="info" name="info" rows="4" required></textarea>
-
-                    <br>
-
-                    <label>
-                    <input type="checkbox" required> Acepto la política de privacidad
-                    </label>
-
-                    <br>
-
-                    <button type="submit">Enviar</button>
-                </fieldset>
-            </form>
-        </section>
     </main>
-
     <!-- Pie de pagina -->
     <footer id="footer">
         <div class="social-icons">
-            <a href="https://www.facebook.com/" target="_blank"><img src="../assets/img/fb.png" alt="Facebook"></a>
-            <a href="https://x.com/" target="_blank"><img src="../assets/img/X-Logo.png" alt="X"></a>
-            <a href="https://www.instagram.com/" target="_blank"><img src="../assets/img/images.jpeg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/" target="_blank">
+              <img src="../assets/img/fb.png" alt="Facebook" width="512" height="512">
+            </a>
+            <a href="https://x.com/" target="_blank">
+              <img src="../assets/img/X-Logo.png" alt="X" width="3840" height="2160">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+              <img src="../assets/img/images.jpeg" alt="Instagram" width="300" height="168">
+            </a>
         </div>
-        <p>ESIE Servicio de Entregas - Getafe, Madrid, España</p>
-        <p>&copy; 2025 ESIE — Todos los derechos reservados</p>
-        <p>
-            <a href="#footer"><strong>Aviso Legal:</strong></a> Este sitio web es una empresa ficticia creada con fines aprendizaje.
-            Todo el contenido mostrado es de carácter demostrativo y no representa servicios reales.&copy;.
-        </p>
+        <div class=" avisoLegal">
+            <p>ESIE Servicio de Entregas - Getafe, Madrid, España</p>
+            <p>&copy; 2025 ESIE — Todos los derechos reservados</p>
+            <p>
+            <a href="#footer"><span>Aviso Legal:</span></a> Este sitio web es
+            una empresa ficticia creada con fines de aprendizaje. Todo el contenido
+            mostrado es de carácter demostrativo y no representa servicios
+            reales.&copy;.
+            </p>
+        </div>
     </footer>
 </body>
 </html>
